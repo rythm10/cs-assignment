@@ -4,20 +4,19 @@ public class LogData {
 
     String id;
     String state;
-    Long timestamp;
+    long timestamp;
     String type;
     String host;
     private boolean alertFlag;
     private int eventDuration;
 
-    public LogData(String id, String state, Long timestamp, String type, String host, boolean alertFlag, int eventDuration) {
+    public LogData(String id, String state, Long timestamp, String type, String host) {
         this.id = id;
         this.state = state;
         this.timestamp = timestamp;
         this.type = type;
         this.host = host;
-        this.alertFlag = alertFlag;
-        this.eventDuration = eventDuration;
+
     }
 
     @Override
@@ -65,11 +64,11 @@ public class LogData {
         this.state = state;
     }
 
-    public Long getTimestamp() {
+    public long getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Long timestamp) {
+    public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
 

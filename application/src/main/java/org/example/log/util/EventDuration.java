@@ -6,8 +6,7 @@ import java.util.List;
 
 public class EventDuration {
 
-
-    public void setTheAlertFlagsForDelayedEvents(List<LogData> list) {
+    public void setAlertFlagsForDelayedEvents(List<LogData> list) {
 
         long lapsTime = 0;
         for (int i = 0; i < list.size() - 1; i++) {
@@ -26,7 +25,6 @@ public class EventDuration {
                     list.get(i).setEventDuration((int) lapsTime);
                     list.get(j - 1).setAlertFlag(true);
                     list.get(j - 1).setEventDuration((int) lapsTime);
-
                     lapsTime = 0;
                     break;
                 } else if (lapsTime <= 4) {

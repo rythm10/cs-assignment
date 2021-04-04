@@ -22,7 +22,7 @@ public class LoggerApplication {
 
            // read data to update AlertFlag (true if the event took longer than 4ms, otherwise false)
             EventDuration eventDuration = new EventDuration();
-            eventDuration.setTheAlertFlagsForDelayedEvents(dataList);
+            eventDuration.setAlertFlagsForDelayedEvents(dataList);
             DBOperations.uploadToDatabase(dataList);
 
             System.out.println("Log read and upload Process successfully completed!");
